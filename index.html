@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+      <!-- Sidebar -->
+      <div class="sidebar">
+
+      <!-- button -->
+      <a href='#' class='previous' id='prebutton'>&#8249;</a>
+      <a href='#' class='next' id='nextbutton'>&#8250;</a>
+      <br><br>
+
+      <!-- insert an image -->
+      <div class="image" >
+        <img src="image/airbnb.png" width="200" height=auto>
+      </div>
+      <br><br>
+
+      <!-- title & text  -->
+      <h1 id='title'>Loading</h1><br>
+      <label id="text1" class='tab'></label> <br><br>
+      <label id="text2" class='tab'></label>
+
+      <!-- input box -->
+      <div id='inputs'>
+        <div id='inputs1' class='inputbox'>
+          <label id=filter >Number of Bedrooms</label>
+          <input type="checkbox" id="cbox-input1" checked><br>
+          <input id="lowerbed" type="number" placeholder="0" value="0" size='5' maxlength='10' style="width:150px; height:20px;">
+          <label> to </label>
+          <input id="upperbed" type="number" placeholder="3" value="10" size='6' maxlength='10' style="width:150px; height:20px;">
+        </div>
+        <div id='inputs2' class='inputbox'>
+          <label id=filter > Number of Accommodates</label>
+          <input type="checkbox" id="cbox-input2" checked><br>
+          <input id="loweraccom" type="number" placeholder="0"  value="0"  size='3' style="width:150px; height:20px;" >
+          <label> to </label>
+          <input id="upperaccom" type="number" placeholder="3" value="10" size='3'  style="width:150px; height:20px;">
+        </div>
+        <div id='inputs3' class='inputbox'>
+          <label id=filter>Room Type:</label>
+          <select id='roomtype'>
+            <option value=0>Private room</option>
+            <option value=1>Entire home/apt</option>
+            <option value=2>Shared room</option>
+            <option value=3>Hotel room</option>
+          </select>
+          <br><br>
+          <button id="plotbutton">Search</button>
+        </div>
+        <div id='results' class='inputbox'>
+          <label id='numberofresults'>0</label>
+          <label id=filter > results have been found.</lable>
+        </div>
+      </div>
+      <br>
+
+      <!-- detail information of airbnb -->
+      <div>
+        <label id='tip' class='tipbox'>Click the specific Airbnb for more information</label>
+      </div>
+      <div id='detail'>
+        <h6 id='name' class='text'></h5>
+        <h4 id='revenue' class='text'></h3>
+        <table>
+          <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+          </tr>
+          <tr>
+            <td>Price per Night</td>
+            <td id='price'></td>
+          </tr>
+          <tr>
+            <td>Price per Person</td>
+            <td id='price_per_person'></td>
+          </tr>
+          <tr>
+            <td>Neighbourhood</td>
+            <td id='neighbourhood'></td>
+          </tr>
+          <tr>
+            <td>Bedrooms</td>
+            <td id='bedrooms'></td>
+          </tr>
+          <tr>
+            <td>Accommodates</td>
+            <td id='accommodates'></td>
+          </tr>
+          <tr>
+            <td>Room Type</td>
+            <td id='room_type'></td>
+          </tr>
+
+        </table>
+      </div>
+
+      <!-- persional information -->
+      <p id='tip_person' >Ziqun Li 's Midterm Project for MUSA611</h1><br>
+    </div>
+
+      <!-- Map -->
+      <div id="map" class="map"></div>
+
+      <!-- legend  -->
+      <div id="legend">
+        <div id="legend_title">Legend </div>
+          <ul>
+            <li>monthly income</li>
+            <li><span style='background:#DFDFDF;'></span>0$-5800$</li>
+            <li><span style='background:#6BB7B9;'></span>5800$-6800$</li>
+            <li><span style='background:#008080;'></span>6800$-8400$</li>
+            <li><span style='background:#007D8C;'></span>8400$-11000$</li>
+            <li><span style='background:#FF5A60;'></span>>11000$</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Javascript Imports -->
+      <script src="src/jquery-2.2.0.js"></script>
+      <script src="src/underscore.js"></script>
+      <script src="src/leaflet.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/functions.js"></script>
+      <script src="js/slide.js"></script>
+    </body>
+</html>
