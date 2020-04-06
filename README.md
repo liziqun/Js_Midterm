@@ -1,4 +1,4 @@
-# 
+### Pricing Tools for Airbnb in New York
 
 #### Ziqun Li  Midterm Project for MUSA 600 JavaScript
 
