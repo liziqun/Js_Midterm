@@ -1,7 +1,7 @@
 
 // VARIABLES
 var pagenumber = 0; // start with 0;
-var Url = "https://raw.githubusercontent.com/liziqun/Midterm_Js/master/Airbnb_high.json";
+var Url = "https://raw.githubusercontent.com/liziqun/Js_Midterm/master/data/Airbnb_high.json";
 var allData; // For storing all data;
 var pageData; // For storing data to be made into markers;
 var myMarkers; // For storing markers.
@@ -156,7 +156,7 @@ var makePage = function() {
   }
 };
 
-// Generates the last page
+// Generates the last plot page
 var plotPage = function() { // just for last page
   resetMap();
   pageData = filterdata[4](allData);
